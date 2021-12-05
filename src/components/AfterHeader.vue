@@ -141,6 +141,7 @@ export default {
  }
  .blue {
   color: rgb(55, 161, 248);
+  /* color: rgb(0, 118, 165); */
  }
  .green {
   color: rgb(10, 192, 10);

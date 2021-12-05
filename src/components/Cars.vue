@@ -39,8 +39,8 @@
       </div>
       <div class="model-title">
        <p > 
-        <span class="model"> {{car.model}} </span> 
-        <span class="title"> {{car.type}} </span>
+        <span class="model" v-html="car.model">  </span> 
+        <span class="title" v-html="car.type">  </span>
        </p>
       </div>
       <div class="div-with-btn">
@@ -167,6 +167,9 @@
       </div>
      </div> -->
     </div>
+    <div class="carica-btn">
+      <button>CARICA ALTRE AUTO</button>
+    </div>
   </div>
 </template>
 
@@ -180,13 +183,13 @@ export default {
         {
           id: 1,
           picture: 'images/vw-gray.jpg',
-          model: 'VOLKSWAGEN ECO UP!',
+          model: 'VOLKSWAGEN ECO UP! <br>',
           type: 'move 5p',
           tipo: 'Berlina',
           potenza: '150CV | 110kW',
           cilindrata: '1395 cm',
           btnText: 'GPL',
-          color1: 'rgb(0, 118, 165)',
+          color1: '#005999',
           distance1: '3,85',
           distance1Text: '€x100km per le tue abitudini',
         },
@@ -194,12 +197,12 @@ export default {
           id: 2,
           picture: 'images/ford.jpg',
           model: 'FORD FIESTA',
-          type: '1.1 75 CV Gpl 5p.',
+          type: '1.1 75 CV Gpl <br> 5p.',
           tipo: 'Berlina',
           potenza: '150CV | 110kW',
           cilindrata: '1395 cm',
           btnText: 'GPL',
-          color1: 'rgb(0, 118, 165)',
+          color1: '#005999',
           distance1: '4,96',
           distance1Text: '€x100km',
         },
@@ -207,12 +210,12 @@ export default {
           id: 3,
           picture: 'images/hyunday.jpg',
           model: 'HYUNDAY IONIQ',
-          type: 'ELECTRIC EV 38.3 kWh',
+          type: 'ELECTRIC <br> EV 38.3 kWh',
           tipo: 'Berlina',
           potenza: '150CV | 110kW',
           btnText: 'ELECTRICA',
-          color1: 'rgb(55, 161, 248)',
-          color2: 'rgba(55, 161, 248, 0.5)',
+          color1: '#009ee3',
+          color2: '#95cfed',
           distance1: '3,40',
           distance1Text: '€x100km - ricarica domestica',
           distance2: '8,54',
@@ -222,13 +225,13 @@ export default {
           id: 4,
           picture: 'images/toyota.jpg',
           model: 'TOYOTA PRIUS',
-          type: 'Plug-in Hybrid',
+          type: 'Plug-in <br> Hybrid',
           tipo: 'Berlina',
           potenza: '150CV | 110kW',
           cilindrata: '1395 cm',
           btnText: 'PLUG-IN <br> HYBRID',
-          color1: 'rgb(3, 145, 3)',
-          color2: 'rgb(130, 172, 101)',
+          color1: '#009933',
+          color2: '#88b31a',
           distance1: '5,11',
           distance1Text: '€x100km - ricarica domestica',
           distance2: '6,81',
@@ -238,12 +241,12 @@ export default {
           id: 5,
           picture: 'images/toyota-blue.jpg',
           model: 'TOYOTA Prius 4a serie',
-          type: '1.8 AWD Lounge',
+          type: '1.8 <br> AWD Lounge',
           tipo: 'Berlina',
           potenza: '150CV | 110kW',
           cilindrata: '1395 cm',
           btnText: 'FULL HYBRID',
-          color1: 'rgb(3, 145, 3)',
+          color1: '#009933',
           distance1: '6.97',
           distance1Text: '€x100km',
         },
@@ -251,12 +254,12 @@ export default {
           id: 6,
           picture: 'images/toyota-light-blue.jpg',
           model: 'TOYOTA AYGO',
-          type: '1.0 VVT-i 72 CV 5p.',
+          type: '1.0 VVT-i 72 <br> CV 5p.',
           tipo: 'Berlina',
           potenza: '150CV | 110kW',
           cilindrata: '1395 cm',
           btnText: 'BENZINA',
-          color1: 'red',
+          color1: '#e20000',
           distance1: '7,96',
           distance1Text: '€x100km',
         },
@@ -371,7 +374,7 @@ sup {
  /* padding-bottom: 1rem; */
 }
 .model-title p {
- width: 80%;
+ /* width: 80%; */
  /* border: 1px solid; */
  text-align: left;
 }
@@ -470,6 +473,28 @@ sup {
    background-color: rgb(130, 172, 101);
  }
 
+.carica-btn {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.carica-btn button {
+  color: #fff; 
+  background-color: rgb(250, 77, 46);
+  width: 100%;
+  border: 0;
+  margin: 0 1rem;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.05em;
+  padding: 1rem;
+  /* height: 100%; */
+  /* font-family: ; */
+
+}
 
 
 </style>

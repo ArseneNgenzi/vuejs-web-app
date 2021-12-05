@@ -136,15 +136,17 @@ export default {
   font-family: 'Work Sans', sans-serif;
  }
  .yellow {
-  color: rgb(245, 190, 40);
+  /* color: rgb(245, 190, 40); */
+  color: #ffc31f;
   
  }
  .blue {
-  color: rgb(55, 161, 248);
+  color: #3e97ff;
   /* color: rgb(0, 118, 165); */
  }
  .green {
-  color: rgb(10, 192, 10);
+  color: #26be0a;
+
  }
  .word33 {
   color: #6e6e6e;
@@ -162,13 +164,13 @@ export default {
   
  }
  .yellow-line {
-  background-color: rgb(245, 190, 40);
+  background-color: #ffc31f;
  }
  .blue-line {
-  background-color: rgb(55, 161, 248);
+  background-color: #3e97ff;
  }
  .green-line {
-  background-color: rgb(10, 192, 10);
+  background-color: #26be0a;
  }
  .afterheadbtn {
   color: rgb(250, 77, 46);

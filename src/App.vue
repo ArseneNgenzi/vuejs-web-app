@@ -3,6 +3,8 @@
     <Header />
     <AfterHeader />
     <Cars />
+    <Footer />
+    <Filter />
   </div>
 </template>
 
@@ -10,6 +12,8 @@
 import Header from './components/Header.vue'
 import AfterHeader from './components/AfterHeader.vue'
 import Cars from './components/Cars.vue'
+import Footer from './components/Footer.vue'
+import Filter from './components/Filter.vue'
 
 export default {
   
@@ -17,7 +21,9 @@ export default {
   components: {
     Header,
     AfterHeader,
-    Cars
+    Cars,
+    Footer,
+    Filter
   }
 }
 </script>
@@ -40,5 +46,6 @@ export default {
   /* background-image: url('../images/logo.jpg'); */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  position: relative;
 }
 </style>

@@ -1,21 +1,11 @@
 <template>
  <div class="header">
   <div class="logo">
-   <div class="orange-line-logo"></div>
-   <div class="logo-words">
-    <div class="logo-Q">Q</div>
-    <div class="logo-premium-dots">
-     <h1 class="premium-word">PREMIUM</h1>
-     <div class="dots">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
-     </div>
-    </div>
-   </div>
+   <img src="images/logo.jpg" alt="">
   </div>
-  <div class="burger-menu">bar</div>
+  <div class="burger-menu">
+   <img src="images/burger.jpg" alt="">
+  </div>
  </div>
 </template>
 
@@ -27,47 +17,21 @@
 
 <style scoped>
 .header {
- 
+ grid-column: 1 / -1;
  display: flex;
  justify-content: space-between;
  align-items: center;
+ box-shadow: 5px 5px 10px 2px rgba(145, 145, 145, 0.5);
+ position: sticky;
+ top: 0;
+ background-color: #fff;
+ /* width: 100%; */
 }
 .logo {
- background-color: yellow;
- width: 70%;
-}
-.orange-line-logo {
- width: 40%;
- height: 0.3rem;
- background-color: rgb(255, 115, 0);
+  width: fit-content;
+  height: fit-content;
 }
 .burger-menu {
- /* width: 50%; */
- background-color: red;
-
-}
-.logo-words {
- display: flex;
- align-items: center;
-}
-.logo-Q {
- font-size: 3em;
- font-weight: bolder;
- color: rgb(255, 115, 0);
-}
-.premium-word {
- font-weight: bolder;
- font-size: 1.5em;
- letter-spacing: 0.1em;
-}
-.dots {
- display: flex;
-}
-.dot {
- width: 0.5rem;
- height: 0.5rem;
- background-color: rgb(255, 115, 0);
- margin-right: 0.1rem;
- border-radius: 50%;
+  margin: 0 1rem;
 }
 </style>

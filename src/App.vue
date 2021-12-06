@@ -1,10 +1,11 @@
 <template>
   <div class="whole-app">
-    <Header />
-    <AfterHeader />
-    <Cars />
-    <Footer />
-    <Filter />
+    <Header v-show="hideOthers" />
+    <AfterHeader v-show="hideOthers"/>
+    <Cars v-show="hideOthers"/>
+    <Footer v-show="hideOthers"/>
+    <Filter @click="filtraAutoVisible = !filtraAutoVisible; hideOthers = !hideOthers" />
+    <FiltraAuto v-show="filtraAutoVisible" @closeFiltra="filtraAutoVisible = false; hideOthers = false" @click="hideOthers =!hideOthers"/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import AfterHeader from './components/AfterHeader.vue'
 import Cars from './components/Cars.vue'
 import Footer from './components/Footer.vue'
 import Filter from './components/Filter.vue'
+import FiltraAuto from './components/FiltraAuto.vue'
 
 export default {
   
@@ -23,7 +25,14 @@ export default {
     AfterHeader,
     Cars,
     Footer,
-    Filter
+    Filter,
+    FiltraAuto
+  },
+  data(){
+    return {
+      filtraAutoVisible: false,
+      hideOthers: true,
+    }
   }
 }
 </script>

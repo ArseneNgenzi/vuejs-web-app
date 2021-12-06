@@ -1,4 +1,5 @@
 <template>
+
  <div class="filter">
    <i class="fa fa-sliders" aria-hidden="true"></i>
   <button class="filter-btn">
@@ -46,4 +47,5 @@
   font-size: 2rem;
   margin-left: 1rem;
  }
+ 
 </style>

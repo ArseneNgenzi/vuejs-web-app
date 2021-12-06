@@ -346,15 +346,38 @@ sup {
 #costo {
   color: rgb(250, 77, 46);
 }
-.fade-enter,
+
+
+/* .fade-enter,
 .fade-enter-active,
 .fade-leave-active,
 .fade-enter-to {
   transition: opacity 800ms;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+} */
+.fade-enter-from {
   opacity: 0;
 }
+.fade-enter-to {
+  opacity: 1;
+}
+.fade-enter-active {
+  transition:  opacity 500ms ease;
+}
+.fade-leave-from {
+  opacity: 1;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-leave-active {
+  transition: opacity 300ms ease;
+}
+
+
+
 .all-cars {
  /* border: 1px solid; */
  margin: 0 1rem;

@@ -25,6 +25,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  
  }
  .filter-btn {
   background-color: rgb(250, 77, 46);
@@ -36,6 +37,7 @@
   font-size: 2rem;
   font-weight: bold;
   padding: 1rem 0;
+  cursor: pointer;
   /* flex: 1; */
  }
  .filter .fa {

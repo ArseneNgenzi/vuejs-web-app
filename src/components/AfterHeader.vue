@@ -44,18 +44,36 @@
      <div class="green-line"></div>
     </div>
    </div>
-   <button class="afterheadbtn"> <img src="images/cambia.jpg" alt=""></button>
+   <button class="afterheadbtn" @click="changeShowDoveBooleanValue"> <img src="images/cambia.jpg" alt=""></button>
+
+
+
+   <!-- DOVEUSI COMPONENT COMMENTED OUT -->
+   <!-- <Doveusi v-show="showDoveUsi" @closeDoveUsi="showDoveUsi = false"/> -->
   </div>
 </template>
 
 <script>
+// import Doveusi from './Doveusi.vue'
 export default {
+
   name: 'AfterHeader',
+  components: {
+    // Doveusi,
+  },
   data(){
    return {
     // orderByShow: false,
+    showDoveUsi: false,
+  
    }
-  }
+  },
+  methods:{
+    changeShowDoveBooleanValue(){
+      this.showDoveUsi = true;
+    }
+  },
+  // props: ['showOtherss'],
 }
 </script>
 

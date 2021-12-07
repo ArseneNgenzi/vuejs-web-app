@@ -2,10 +2,22 @@
   <div class="whole-app">
     <Header v-show="showOthers" />
     <AfterHeader v-show="showOthers"/>
-    <Cars v-show="showOthers"/>
-    <Footer v-show="showOthers"/>
-    <Filter @click="filtraAutoVisible = true; showOthers = false" />
-    <FiltraAuto v-show="filtraAutoVisible" @closeFiltra="showOthers = true; filtraAutoVisible = false" />
+    <Cars v-show="showOthers" />
+    <Footer v-show="showOthers" />
+    <Filter
+      @click="
+        filtraAutoVisible = true;
+        showOthers = false
+      "
+    />
+    <FiltraAuto
+      v-show="filtraAutoVisible"
+      @closeFiltra="
+        showOthers = true;
+        filtraAutoVisible = false
+      "
+    />
+    
   </div>
 </template>
 
@@ -18,7 +30,6 @@ import Filter from './components/Filter.vue'
 import FiltraAuto from './components/FiltraAuto.vue'
 
 export default {
-  
   name: 'App',
   components: {
     Header,
@@ -26,20 +37,21 @@ export default {
     Cars,
     Footer,
     Filter,
-    FiltraAuto
+    FiltraAuto,
+    // Doveusi,
   },
-  data(){
+  data() {
     return {
       filtraAutoVisible: false,
       showOthers: true,
+      // showDoveUsi: false, 
     }
-  }
+  },
 }
 </script>
 
 <style>
 #app {
-  
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -51,10 +63,12 @@ export default {
 .whole-app {
   /* width: 10rem; */
   /* height: 10rem; */
-  /* border: 1px solid rgb(224, 224, 224); */
+  border: 1px solid rgb(224, 224, 224);
   /* background-image: url('../images/logo.jpg'); */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
+  /* width: 425px; */
+  /* margin: 0rem auto; */
 }
 </style>

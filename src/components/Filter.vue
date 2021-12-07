@@ -18,7 +18,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
 
  .filter {
-  /* grid-column: 1 / -1; */
+  grid-column: 1 / -1;
   position: fixed;
   bottom: 0;
   background-color: rgb(250, 77, 46);

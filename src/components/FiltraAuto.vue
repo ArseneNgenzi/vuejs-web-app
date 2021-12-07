@@ -368,17 +368,17 @@
 .filtra-auto-div {
    position: absolute;
    background-color: #fff;
-   /* grid-column: 1 / -1; */
+   grid-column: 1 / -1;
    left: 0;
    top: 0;
-   width: 100%;
+   width: auto;
    /* bottom: 0; */
    /* height: 80rem; */
    z-index: 1;
    /* overflow-y: scroll;
    scroll-behavior: smooth; */
    /* border: 1px solid; */
-   padding-bottom: 6rem;
+   padding-bottom: 7rem;
  }
  .filtra-auto-div-header {
    border-bottom: 1px solid #c1c1c1;

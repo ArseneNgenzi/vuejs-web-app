@@ -56,7 +56,7 @@
         </div>
        </div>
        <div class="tpc-btn">
-        <button :style="{color: car.color1, border: 2 +'px' + ' '+ 'solid' + ' ' + car.color1, width: 10.5+'rem', height: 4+'rem'}" v-html="car.btnText" > </button>
+        <button :style="{color: car.color1, border: 1 +'px' + ' '+ 'solid' + ' ' + car.color1, width: 10.5+'rem', height: 4+'rem'}" v-html="car.btnText" > </button>
        </div>
       </div>
       <div class="distances" >
@@ -67,8 +67,14 @@
          <div class="distance1-icon"><i class="fa fa-info" aria-hidden="true"></i></div>
         </div>
         <div class="distance1-illustration">
-         <div class="illu1" id="distance1-illuBg" :style="{background: car.color1}"></div>
-         <div class="illu1"></div>
+         <div class="illu1 distance1-illuBg1" > <!--:style="{background: car.color1}"-->
+          <div id="dist1-1stdiv-left" :style="{width: car.dist1Illu1ColoredWidth , background: car.color1}"></div>
+          <div id="dist1-1stdiv-right"></div>
+         </div>
+         <div class="illu1 distance1-illuBg">
+          <div id="dist1-2nddiv-left" :style="{width: car.dist1Illu2ColoredWidth , background: car.color1}"></div>
+          <div id="dist1-2nddiv-right"></div>
+         </div>
          <div class="illu1"></div>
          <div class="illu1"></div>
          <div class="illu1"></div>
@@ -84,10 +90,13 @@
          <div class="distance2-icon"><i class="fa fa-info" aria-hidden="true"></i></div>
         </div>
         <div class="distance2-illustration">
-         <div class="illu2" id="distance2-illuBg" :style="{background: car.color2}"></div>
-         <div class="illu2" id="illu2-divided">
-           <div class="illu2-colored" :style="{background: car.color2}"></div>
-           <div class="illu2-uncolored"></div>
+         <div class="illu2 distance2-illuBg1" > <!--:style="{background: car.color1}"-->
+          <div id="dist2-1stdiv-left" :style="{width: car.dist2Illu1ColoredWidth , background: car.color2}"></div>
+          <div id="dist2-1stdiv-right"></div>
+         </div>
+         <div class="illu2 distance2-illuBg">
+          <div id="dist2-2nddiv-left" :style="{width: car.dist2Illu2ColoredWidth , background: car.color2}"></div>
+          <div id="dist2-2nddiv-right"></div>
          </div>
          <div class="illu2"></div>
          <div class="illu2"></div>
@@ -192,6 +201,8 @@ export default {
           color1: '#005999',
           distance1: '3,85',
           distance1Text: '€x100km per le tue abitudini',
+          dist1Illu1ColoredWidth: '85%',
+          dist1Illu2ColoredWidth: '0px',
         },
         {
           id: 2,
@@ -205,6 +216,8 @@ export default {
           color1: '#005999',
           distance1: '4,96',
           distance1Text: '€x100km',
+          dist1Illu1ColoredWidth: '100%',
+          dist1Illu2ColoredWidth: '0px',
         },
         {
           id: 3,
@@ -213,13 +226,17 @@ export default {
           type: 'ELECTRIC <br> EV 38.3 kWh',
           tipo: 'Berlina',
           potenza: '150CV | 110kW',
-          btnText: 'ELECTRICA',
+          btnText: 'ELECTTRICA',
           color1: '#009ee3',
           color2: '#95cfed',
           distance1: '3,40',
           distance1Text: '€x100km - ricarica domestica',
           distance2: '8,54',
           distance2Text: '€x100km - col. cor. continua',
+          dist1Illu1ColoredWidth: '70%',
+          dist1Illu2ColoredWidth: '0px',
+          dist2Illu1ColoredWidth: '100%',
+          dist2Illu2ColoredWidth: '70%',
         },
         {
           id: 4,
@@ -236,6 +253,10 @@ export default {
           distance1Text: '€x100km - ricarica domestica',
           distance2: '6,81',
           distance2Text: '€x100km - col. cor. alternata',
+          dist1Illu1ColoredWidth: '100%',
+          dist1Illu2ColoredWidth: '0px',
+          dist2Illu1ColoredWidth: '100%',
+          dist2Illu2ColoredWidth: '30%',
         },
         {
           id: 5,
@@ -249,6 +270,8 @@ export default {
           color1: '#009933',
           distance1: '6.97',
           distance1Text: '€x100km',
+          dist1Illu1ColoredWidth: '100%',
+          dist1Illu2ColoredWidth: '30%',
         },
         {
           id: 6,
@@ -262,6 +285,8 @@ export default {
           color1: '#e20000',
           distance1: '7,96',
           distance1Text: '€x100km',
+          dist1Illu1ColoredWidth: '100%',
+          dist1Illu2ColoredWidth: '30%',
         },
       ],
     }
@@ -270,6 +295,11 @@ export default {
 </script>
 
 <style scoped>
+
+
+#dist1-1stdiv-left, #dist1-1stdiv-right, #dist1-2nddiv-left, #dist1-2nddiv-right, #dist2-1stdiv-left, #dist2-1stdiv-right, #dist2-2nddiv-left, #dist2-2nddiv-right {
+  height: 100%;
+}
 sup {
  font-size: 0.7rem;
 }
@@ -309,6 +339,7 @@ sup {
   padding: 0.7rem;
   cursor: pointer;
   position: relative;
+  border-radius: 0.6rem;
   /* transition: 500ms ease-in-out; */
 }
 .ordina-per {
@@ -341,22 +372,12 @@ sup {
   text-align: left;
   margin: 1rem;
   font-weight: bold;
-  z-index: 100;
+  z-index: 1;
 }
 #costo {
   color: rgb(250, 77, 46);
 }
 
-
-/* .fade-enter,
-.fade-enter-active,
-.fade-leave-active,
-.fade-enter-to {
-  transition: opacity 800ms;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-} */
 .fade-enter-from {
   opacity: 0;
 }
@@ -476,25 +497,7 @@ sup {
   background-color: #e9e8e8;
   margin-right: 0.1em;
 }
-#distance1-illuBg {
-  background-color: rgb(3, 145, 3);
-}
-#distance2-illuBg {
-  background-color: rgb(130, 172, 101);
-}
-.distance2-number {
-  color: rgb(130, 172, 101);
-}
-#distance2-illuBg {
-  background-color: rgb(130, 172, 101);
-}
- #illu2-divided {
-   display: flex;
- }
- .illu2-colored {
-   width: 30%;
-   background-color: rgb(130, 172, 101);
- }
+
 
 .carica-btn {
   /* border: 1px solid; */

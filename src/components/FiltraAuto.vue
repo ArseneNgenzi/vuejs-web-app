@@ -363,6 +363,8 @@
 </script>
 
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
 .filtra-auto-div {
    position: absolute;
    background-color: #fff;
@@ -385,6 +387,11 @@
    margin: 0 1rem;
    padding: 2rem 0;
  }
+
+.filtra-auto-div-header h1 {
+  font-family: 'Work Sans', sans-serif;
+}
+
  .close-filtra-auto-div {
    font-size: 2.5em;
    padding: 0 0.6rem;
@@ -573,6 +580,8 @@
    left: 0;
    width: 100%;
    padding: 0.13rem;
+   user-select: none;
+   z-index: 3;
  }
  ._88-auto h1 {
    color: #fff;
@@ -591,7 +600,7 @@
   opacity: 1;
  }
  .filtraAutoTransition-enter-active {
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 700ms ease-in-out;
  }
  .filtraAutoTransition-leave-from {
   opacity: 1;
@@ -600,7 +609,7 @@
   opacity: 0;
  }
  .filtraAutoTransition-leave-active {
-  transition: opacity 500ms ease-in-out;
+  transition: opacity 350ms ease-in-out;
  }
  
 

@@ -1,11 +1,11 @@
 <template>
   <div class="whole-app">
-    <Header v-show="hideOthers" />
-    <AfterHeader v-show="hideOthers"/>
-    <Cars v-show="hideOthers"/>
-    <Footer v-show="hideOthers"/>
-    <Filter @click="filtraAutoVisible = !filtraAutoVisible; hideOthers = !hideOthers" />
-    <FiltraAuto v-show="filtraAutoVisible" @closeFiltra="filtraAutoVisible = false; hideOthers = false" @click="hideOthers =!hideOthers"/>
+    <Header v-show="showOthers" />
+    <AfterHeader v-show="showOthers"/>
+    <Cars v-show="showOthers"/>
+    <Footer v-show="showOthers"/>
+    <Filter @click="filtraAutoVisible = true; showOthers = false" />
+    <FiltraAuto v-show="filtraAutoVisible" @closeFiltra="showOthers = true; filtraAutoVisible = false" />
   </div>
 </template>
 
@@ -31,7 +31,7 @@ export default {
   data(){
     return {
       filtraAutoVisible: false,
-      hideOthers: true,
+      showOthers: true,
     }
   }
 }

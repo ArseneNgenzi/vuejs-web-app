@@ -26,7 +26,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  
+  user-select: none;
  }
  .filter-btn {
   background-color: rgb(250, 77, 46);

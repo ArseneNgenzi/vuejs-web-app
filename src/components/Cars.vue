@@ -56,7 +56,7 @@
         </div>
        </div>
        <div class="tpc-btn">
-        <button :style="{color: car.color1, border: 1 +'px' + ' '+ 'solid' + ' ' + car.color1, width: 10.5+'rem', height: 4+'rem'}" v-html="car.btnText" > </button>
+        <button :style="{color: car.color1, border: 1 +'px' + ' '+ 'solid' + ' ' + car.color1, width: 8+'rem', height: 4+'rem'}" v-html="car.btnText" > </button>
        </div>
       </div>
       <div class="distances" >
@@ -226,7 +226,7 @@ export default {
           type: 'ELECTRIC <br> EV 38.3 kWh',
           tipo: 'Berlina',
           potenza: '150CV | 110kW',
-          btnText: 'ELECTTRICA',
+          btnText: 'ELETTRICA',
           color1: '#009ee3',
           color2: '#95cfed',
           distance1: '3,40',
@@ -453,11 +453,11 @@ sup {
 .tpc-btn button {
  border: 1px solid rgb(3, 145, 3);
  color: rgb(3, 145, 3);
- font-size: 1.1rem;
+ font-size: 1rem;
  font-weight: bold;
  font-family: 'Work Sans', sans-serif;
  cursor: pointer;
- padding: 0.5rem 1.5rem;
+ padding: 0.5rem 0rem;
  background-color: #fff;
 }
 .number-text-icon {

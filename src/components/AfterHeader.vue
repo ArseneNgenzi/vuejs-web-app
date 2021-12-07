@@ -21,7 +21,7 @@
     <p class="piuinfo">I costi chilometrici relativi alle auto <br> provate dal 2016 ad oggi. <span> <a href="">Più info</a> </span> </p>
    </div>
    <div class="afterheader-h4">
-    <h4>COSTI CALCOLATI <br> SU QUESTE PERCENTUALI DI UTILIZZO</h4>
+    <p>COSTI CALCOLATI <br> SU QUESTE PERCENTUALI DI UTILIZZO</p>
    </div>
    <div class="afterheader-numbers-colors">
     <div class="numbers-33">
@@ -61,6 +61,9 @@ export default {
 
 
 <style scoped>
+
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
  .afterheader {
   grid-column: 1 / -1;
   background-color: #eeeeee;
@@ -114,6 +117,12 @@ export default {
  }
  .afterheader-h4 {
   padding: 1em 0;
+  
+ }
+ .afterheader-h4 p {
+   font-weight: bold;
+   font-family: 'Work Sans', sans-serif;
+   color: #333333;
  }
  .numbers-33 {
   display: flex;

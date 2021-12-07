@@ -6,7 +6,7 @@
     <h1>Filtra auto</h1>
     <button class="close-filtra-auto-div" @click="$emit('closeFiltra')">
       <!-- <i class="fa fa-times-circle" aria-hidden="true"></i> -->
-      X
+      <img src="images/closefiltraauto.jpg" alt="">
     </button>
   </div>
 
@@ -371,7 +371,7 @@
    grid-column: 1 / -1;
    left: 0;
    top: 0;
-   width: auto;
+   width: 100%;
    /* bottom: 0; */
    /* height: 80rem; */
    z-index: 1;
@@ -393,13 +393,13 @@
 }
 
  .close-filtra-auto-div {
-   font-size: 2.5em;
-   padding: 0 0.6rem;
+   /* font-size: 2.5em; */
+   padding: 0;
    border-radius: 50%;
    border: 0;
    outline: none;
    color: #fff;
-   background-color: rgb(250, 77, 46);
+   background-color: #ffffff;
    cursor: pointer;
    position: fixed;
    right: 1rem;
@@ -600,7 +600,7 @@
   opacity: 1;
  }
  .filtraAutoTransition-enter-active {
-  transition: opacity 700ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
  }
  .filtraAutoTransition-leave-from {
   opacity: 1;
@@ -609,7 +609,7 @@
   opacity: 0;
  }
  .filtraAutoTransition-leave-active {
-  transition: opacity 350ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
  }
  
 
